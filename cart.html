@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Added to Cart</title>
+    <style>
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="highlight" id="cartMessage">Item added to your cart!</h2>
+    </div>
+
+    <script>
+        let addedItem = localStorage.getItem("addedItem");
+        let cartMessage = "";
+
+        if (addedItem == 1) {
+            cartMessage = "The first item has been added to your cart!";
+        } else if (addedItem == 2) {
+            cartMessage = "The second item has been added to your cart!";
+        } else if (addedItem == 3) {
+            cartMessage = "The third item has been added to your cart!";
+        }
+
+        document.getElementById("cartMessage").innerText = cartMessage;
+        localStorage.removeItem("addedItem");
+    </script>
+</body>
+</html>
