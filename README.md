@@ -1,4 +1,3 @@
-# playwright_duplicate_elements
 # Identifying Duplicate Elements with Playwright
 
 ## Overview
